@@ -35,15 +35,37 @@
 
             <!-- INPUT -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBox Width="100" Margin="5" Text="{Binding SelectedContact.Name}" />
-                <TextBox Width="50" Margin="5" Text="{Binding SelectedContact.Age}" />
-                <TextBox Width="120" Margin="5" Text="{Binding SelectedContact.Email}" />
-                <TextBox Width="100" Margin="5" Text="{Binding SelectedContact.City}" />
-                <TextBox Width="100" Margin="5" Text="{Binding SelectedContact.Telephone}" />
 
-                <Button Content="Add" Width="70" Margin="5" Click="Add_Click"/>
-                <Button Content="Update" Width="70" Margin="5" Click="Update_Click"/>
-                <Button Content="Delete" Width="70" Margin="5" Click="Delete_Click"/>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Name" Margin="0,0,0,2"/>
+                    <TextBox Width="100" Text="{Binding SelectedContact.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock Text="Age" Margin="0,0,0,2"/>
+                    <TextBox Width="50" Text="{Binding SelectedContact.Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock Text="Email" Margin="0,0,0,2"/>
+                    <TextBox Width="120" Text="{Binding SelectedContact.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock Text="City" Margin="0,0,0,2"/>
+                    <TextBox Width="100" Text="{Binding SelectedContact.City, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <StackPanel Margin="5">
+                    <TextBlock Text="Telephone" Margin="0,0,0,2"/>
+                    <TextBox Width="100" Text="{Binding SelectedContact.Telephone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <StackPanel VerticalAlignment="Bottom" Margin="5" Orientation="Horizontal">
+                    <Button Content="Add" Width="70" Margin="5" Click="Add_Click"/>
+                    <Button Content="Update" Width="70" Margin="5" Click="Update_Click"/>
+                    <Button Content="Delete" Width="70" Margin="5" Click="Delete_Click"/>
+                </StackPanel>
             </StackPanel>
 
             <!-- TABLE -->

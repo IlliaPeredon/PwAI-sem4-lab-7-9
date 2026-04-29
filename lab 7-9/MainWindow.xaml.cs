@@ -38,7 +38,8 @@ namespace Contacts
 
             ContactsView = new ObservableCollection<Contact>(Contacts);
 
-            SelectedContact = null;
+            // Ensure SelectedContact is initialized so input TextBox bindings target an actual object.
+            SelectedContact = new Contact();
 
             DataContext = this;
         }
